@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: demo-ai-healthcare-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py api --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: AI_MODE
+        value: mock
