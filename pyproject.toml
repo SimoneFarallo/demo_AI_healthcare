@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pss-ai"
+version = "0.1.0"
+description = "Public social services support assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.2",
+  "rapidfuzz>=3.9",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+ai = [
+  "langchain>=0.2",
+  "langchain-openai>=0.1",
+  "openai>=1.30",
+]
+ocr = [
+  "pymupdf>=1.24",
+  "easyocr>=1.7",
+]
+api = [
+  "fastapi>=0.111",
+  "uvicorn>=0.30",
+]
+dev = [
+  "pytest>=8.2",
+  "pytest-cov>=5.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"

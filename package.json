@@ -1,0 +1,15 @@
+﻿{
+  "name": "pss-healthcare",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "set \"PATH=C:\\Users\\simon\\AppData\\Local\\Microsoft\\WinGet\\Packages\\OpenJS.NodeJS.LTS_Microsoft.Winget.Source_8wekyb3d8bbwe\\node-v24.15.0-win-x64;%PATH%\" && concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "set \"PATH=C:\\Users\\simon\\AppData\\Local\\Microsoft\\WinGet\\Packages\\OpenJS.NodeJS.LTS_Microsoft.Winget.Source_8wekyb3d8bbwe\\node-v24.15.0-win-x64;%PATH%\" && npm --prefix frontend run dev",
+    "dev:server": ".\\.venv\\Scripts\\python.exe main.py api --port 8000",
+    "build": "set \"PATH=C:\\Users\\simon\\AppData\\Local\\Microsoft\\WinGet\\Packages\\OpenJS.NodeJS.LTS_Microsoft.Winget.Source_8wekyb3d8bbwe\\node-v24.15.0-win-x64;%PATH%\" && npm --prefix frontend run build",
+    "preview": "set \"PATH=C:\\Users\\simon\\AppData\\Local\\Microsoft\\WinGet\\Packages\\OpenJS.NodeJS.LTS_Microsoft.Winget.Source_8wekyb3d8bbwe\\node-v24.15.0-win-x64;%PATH%\" && npm --prefix frontend run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
